@@ -1,0 +1,12 @@
+1.  stdint.h is a header file that conatins definitions of standard data types that have additional properties like providing storage for exact size, independent of implemenation. stdint.h provides data types that are called fixed width integer type.
+2.  uint8_t is a data type that is defined in the stdint.h header file. It defines an unsigned integer of 8 bits size. Similarly, uint32_t is an unsigned integer of 32 bits, int32_t is integer of 32 bits, uint16_t is an unsigned integer of 16 bits.
+3.  BYTE is 1 byte in size, DWORD is 4 bytes in size, LONG is also 4 bytes in size, and WORD is 2 bytes in size. 
+4.  0xff and 0xd8
+5.  bfSize stores the size of the bitmap file, whereas biSize stores the size of the bits required to form the image.
+6.  If biHeight is negative, it means that the top left pixel of the image is stored in the top left position of the byte equivalent array of the corresponsing image.
+7.  biBitCount
+8.  fopen() might return NULL in case there is some error in opening the file.
+9.  fread() stores data elements from one source and stores them in other source. The third element in the fread() function specifies the number of data elements that it stores.
+10. 3
+11. It offsets the value of the file pointer.
+12. This is the current position of the file pointer.
