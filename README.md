@@ -7,13 +7,13 @@ The Game of Fifteen is a puzzle played on a square, two-dimensional board with n
 The goal of this puzzle is to arrange the board’s tiles from smallest to largest, left to right, top to bottom,
 with an empty space in board’s bottom-right corner, as shown below:
 
-1  2  3  4
+1      2      3      4
 
-5  6  7  8
+5      6      7      8
 
-9  10 11 12
+9      10     11     12
 
-13 14 15  _
+13     14     15      _
 
 Although other configurations are possible, we shall assume that this game begins with the board’s tiles in reverse order,
 from largest to smallest, left to right, top to bottom, with an empty space in the board’s bottom-right corner. If, however,
