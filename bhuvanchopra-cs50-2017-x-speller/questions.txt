@@ -1,0 +1,7 @@
+0.  Longest word in a dictionary.
+1.  getrusage stores the before function time and after function time in a particular data structure.
+2.  16
+3.  TODO
+4.  TODO
+5.  TODO
+6.  TODO

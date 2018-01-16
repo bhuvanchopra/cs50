@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #8d7d6d;
+}
+</style>
+<h1>Welcome to Bhuvan Chopra's stock exchange!</h1>
+<br>
+<br>
+    <table>
+
+        <tr>
+        <th>Stock Symbol</th>
+
+        <th>Stock Name</th>
+
+        <th>Quantity</th>
+
+        <th>Current Price</th>
+
+        <th>Total Value</th>
+
+        </tr>
+        {% set sum=[0] %}
+        {% set count=[] %}
+        {% for i in info %}
+            <tr>
+            <td>
+            {{i['symbol']}}
+            </td>
+
+            <td>
+
+            {{m[count|length]}}
+
+            </td>
+
+
+            <td>
+            {{i['SUM(number)']}}
+            </td>
+            <td>
+
+            {{l[count|length]}}
+
+            </td>
+
+            <td>
+            {{"{:,.2f}".format(l[count|length]*i['SUM(number)'])}}
+
+            {% if sum.append(sum[count|length]+l[count|length]*i['SUM(number)']) %} {% endif %}
+            {% if count.append(1) %}{% endif %}
+            </td>
+
+
+            </tr>
+
+
+        {% endfor %}
+
+    </table>
+<br>
+
+        Your current cash balance is : {{balance}}
+        <br>
+        Your grand total (Stocks' total value plus cash) is : {{"${:,.2f}".format(sum[count|length]+cash1[0]['cash'])}}
+
+
+{% endblock %}

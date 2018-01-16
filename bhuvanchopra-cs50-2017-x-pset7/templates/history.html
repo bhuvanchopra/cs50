@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #8d7d6d;
+}
+</style>
+<h3>Your transaction history:</h3>
+<br>
+<br>
+    <table>
+
+        <tr>
+
+        <th>Order Type</th>
+
+        <th>Stock Symbol</th>
+
+        <th>Quantity</th>
+
+        <th>Price</th>
+
+        <th>Date and Time</th>
+
+        </tr>
+        {% set sum=[0] %}
+        {% set count=[] %}
+        {% for i in info %}
+            <tr>
+            <td>
+            {% if i['number'] > 0 %} BUY {% endif %}
+            {% if i['number'] < 0 %} SELL {% endif %}
+
+
+            </td>
+
+
+            <td>
+            {{i['symbol']}}
+            </td>
+
+            <td>
+
+            {% if i['number'] > 0 %} {{i['number']}} {% endif %}
+            {% if i['number'] < 0 %} {{(-1)*(i['number'])}} {% endif %}
+
+            </td>
+
+
+            <td>
+            {{i['price']}}
+            </td>
+            <td>
+
+            {{i['time']}}
+
+            </td>
+
+
+            </tr>
+
+
+        {% endfor %}
+
+    </table>
+
+
+
+{% endblock %}
